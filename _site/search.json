@@ -1,0 +1,49 @@
+[
+
+  
+    {
+      "title"			: "Why Anaconda? How to control Anaconda?",
+      "link"			: "https://GzuPark.github.io/articles/Why-Anaconda-How-to-control-Anaconda/",
+      "excerpt"		: "왜 Anaconda를 쓸까? 어떻게 사용해야 될까?"
+    }
+  
+
+  
+    ,{
+      "title"			: "Comfortable R package loading",
+      "link"			: "https://GzuPark.github.io/blog/Comfortable-R-package-loading/",
+      "excerpt"		: "R package의 install, update 그리고 load를 한번에!"
+    }
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "About Me",
+      "link"			: "https://GzuPark.github.io/about/",
+      "excerpt"		: "So Simple is a responsive Jekyll theme for your words and images."
+    }
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+]

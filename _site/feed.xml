@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://GzuPark.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://GzuPark.github.io/" rel="alternate" type="text/html" /><updated>2017-03-30T04:31:20+09:00</updated><id>https://GzuPark.github.io/</id><title type="html">GzuPark</title><subtitle>Just enjoying my play</subtitle><entry><title type="html">Why Anaconda? How to control Anaconda?</title><link href="https://GzuPark.github.io/articles/Why-Anaconda-How-to-control-Anaconda/" rel="alternate" type="text/html" title="Why Anaconda? How to control Anaconda?" /><published>2017-03-30T00:00:00+09:00</published><updated>2017-03-30T00:00:00+09:00</updated><id>https://GzuPark.github.io/articles/Why-Anaconda-How-to-control-Anaconda</id><content type="html" xml:base="https://GzuPark.github.io/articles/Why-Anaconda-How-to-control-Anaconda/">&lt;h4 id=&quot;section&quot;&gt;목차&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-0&quot;&gt;1. 왜 Anaconda를 사용할까?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-0&quot;&gt;2. Anaconda란 무엇일까?&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-1&quot;&gt;2.1. 패키지 관리&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-2&quot;&gt;2.2. 가상환경&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3&quot;&gt;3. Anaconda 설치&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-0&quot;&gt;4. 패키지 관리&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#5-0&quot;&gt;5. 가상환경&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-1&quot;&gt;5.1. 가상환경 만들기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-2&quot;&gt;5.2. 가상환경 실행&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-3&quot;&gt;5.3. 가상환경 저장&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-4&quot;&gt;5.4. 가상환경 불러오기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-5&quot;&gt;5.5. 가상환경 삭제&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-6&quot;&gt;5.6. 가상환경 공유&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#6-0&quot;&gt;6. 더 알고 싶다면&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ref&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;왜 &lt;a href=&quot;https://www.continuum.io/why-anaconda&quot;&gt;Anaconda&lt;/a&gt; 라는 도구를 쓰는 것일까? Python이나 R의 사용방법을 익히면서 이유없이 설치했거나 도대체 이것이 무엇인지 잘 모른다면 이 글을 읽고 도움이 되길 바란다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;1-0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;anaconda-&quot;&gt;1. 왜 Anaconda를 사용할까?&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://anaconda.org/&quot;&gt;Anaconda&lt;/a&gt;는 데이터사이언스를 유연하게 하기 위한 도구이며, conda 라는 가상환경 관리도구를 사용한다. Anaconda는 설치하기 쉬운 프로그램이며 앞으로 사용하게 될 다양한 개발 환경에 유연하게 대처할 수 있다. 예컨데 구현해보고자 하는 Python 버전과 사용하는 패키지 버전이 내 환경과 다르다면 구현하고자 하는 환경과 동일하게 만들어주기 위해 사용하게 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;2-0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;anaconda--1&quot;&gt;2. Anaconda란 무엇일까?&lt;/h3&gt;
+&lt;p&gt;Anacona는 꽤 큰 용량을 (~500MB) 다운로드 해야된다. 왜냐하면 Python 내에서 150개가 넘는 대중적인 데이터 사이언스 패키지들이 같이 설치되기 때문이다. 만약 모든 패키지가 필요없거나 대역폭이나 저장공간을 절약할 필요가 있다면 오직 conda와 Python만 포함되는 Minicona라는 더 작은 배포판이 있다.&lt;/p&gt;
+
+&lt;p&gt;콘다는 대체로 커맨드라인을 통해 사용하게 될 것인데 만약 익숙하지 않다면 Windows의 경우 &lt;a href=&quot;https://www.lynda.com/-tutorials/Windows-command-line-basics/497312/513424-4.html&quot;&gt;command prompt tutorial for Windows&lt;/a&gt;, OSX/Linux의 경우 Udacity의 코스인 &lt;a href=&quot;https://www.udacity.com/course/linux-command-line-basics--ud595&quot;&gt;Linux Command Line Basics&lt;/a&gt;을 보고 사용방법을 익히길 권한다.&lt;/p&gt;
+
+&lt;p&gt;아마 이미 설치하고 사용하는 Python이 있을텐데 왜 이 모든 것들이 필요할까 의문이 들 것이다. 첫번째로, Anaconda는 많은 데이터 사이언스 패키지들을 같이 설치해주기 때문에 필요한 거의 모든 것을 준비해줄 수 있다. 두번째로, 당신의 패키지와 가상환경을 관리하는 conda를 사용함으로써 당신이 사용할 다양한 라이브러리에서 발생하게 될 이슈들을 줄일 수 있을 것이다. 예컨데, Python 2 와 Python 3 사이에서 오는 &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt; 명령어 &lt;a href=&quot;https://docs.python.org/3.0/whatsnew/3.0.html&quot;&gt;차이&lt;/a&gt;가 유명하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;2-1&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-1&quot;&gt;2.1. 패키지 관리&lt;/h5&gt;
+&lt;p&gt;Python을 다뤄봤다면 이미 &lt;a href=&quot;https://pypi.python.org/pypi/pip&quot;&gt;pip&lt;/a&gt;(Python 라이브러리 관리를 위한 기본 패키지)와 친숙할 것이다. Conda는 pip와 유사하게 사용가능하지만, conda는 pip처럼 Python에 특화되어있는 것이 아니라서 non-Python 패키지도 설치할 수도 있다. 재밌게도 모든 Python 라이브러리가 Anaconda와 conda에서 사용할 수 없다. 대신 pip를 통해 conda 환경에 Python 패키지를 설치할 수 있다. &lt;a href=&quot;#TensorFlow-install&quot;&gt;예: TensorFlow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Conda는 미리 컴파일된 패키지를 설치하게 된다. 예를 들어, 아나콘다 배포판은 &lt;a href=&quot;https://docs.continuum.io/mkl-optimizations/&quot;&gt;MKL library&lt;/a&gt;으로부터 컴파일된 Numpy, Scipy, Scikit-learn 같은 다양한 수학연산을 도와주는 패키지를 포함한다. 컴파일된 패키지들은 Anaconda 배포판의 제작자로부터 유지보수된되는데, 즉 그 이야기는 제작자들이 보통 새로운 패키지 버전보다 천천히 업데이트 한다는 것을 의미한다. 하지만 패키지가 안정화된 후에 포함하는 경향이 있기 때문에 사용자의 입장에서는 편리하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;2-2&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-2&quot;&gt;2.2. 가상환경&lt;/h5&gt;
+&lt;p&gt;Conda는 가상환경 관리도구이다. &lt;a href=&quot;https://virtualenv.pypa.io/en/stable/&quot;&gt;virtulaenv&lt;/a&gt;나 &lt;a href=&quot;https://github.com/yyuu/pyenv&quot;&gt;pyenv&lt;/a&gt;와 같이 다른 가상환경 도구들과 비슷하다.&lt;/p&gt;
+
+&lt;p&gt;가상환경은 당신이 다른 프로젝트를 위해 사용하는 패키지들로부터 분리 및 독립 시켜줄 수 있다. 아마도 당신은 어떤 라이브러리의 특정 버전에서 작동하는 코드를 다루게 될 것이다. 예를들어 당신 Numpy의 새로운 특징을 사용하는 코드를 작성할 수도 있고, 또는 이미 제거된 오래된 특징을 사용하는 코드를 작성할 수도 있다. 일반적으로는 동시에 두가지 버전의 Numpy를 사용하는 것은 불가능하다. 하지만 conda를 사용한다면 특정 버전의 Numpy를 설치 해놓은 가상환경을 사용할 수 있기 때문에 조건에 딱 맞는 프로젝트 환경을 만들 수 있다.&lt;/p&gt;
+
+&lt;p&gt;대표적인 이슈는 위에서 언급한 바와 같이 Python 2 와 Python 3 에서 많이 발생한다. 오래된 코드는 Python 3 에서 작동하지 않을 것이고, 새로운 코드는 Python 2 에서 작동하지 않을 것이다. 만약 두가지 버전을 같은 환경에 모두 설치했다면 많은 혼란과 버그를 경험하고 구글링을 하고 있는 자신을 발견하게 될 것이다. 따라서 무엇보다 분리된 환경을 구축하는 것이 훨씬 좋다.&lt;/p&gt;
+
+&lt;p&gt;Conda 에서는 필요에 따라 사용하는 패키지 버전을 포함한 가상환경을 파일에 저장할 수 있고 이 파일을 코드와 같이 포함하는 것이 일반적이다. 왜냐하면 다른 사람들이 코드에서 사용되는 모든 환경을 그대로 불러오기 쉽게 해주기 때문이다. 물론, pip 또한 비슷한 것이 있다 &lt;code class=&quot;highlighter-rouge&quot;&gt;pip freeze &amp;gt; requirements.txt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;3-0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;anaconda--2&quot;&gt;3. Anaconda 설치&lt;/h3&gt;
+&lt;p&gt;Anaconda는 &lt;a href=&quot;https://www.continuum.io/downloads#windows&quot;&gt;Windows&lt;/a&gt;, &lt;a href=&quot;https://www.continuum.io/downloads#osx&quot;&gt;Mac OS X&lt;/a&gt;, &lt;a href=&quot;https://www.continuum.io/downloads#linux&quot;&gt;Linux&lt;/a&gt; 에서 가능하다. 만약 &lt;a href=&quot;https://conda.io/miniconda.html&quot;&gt;Miniconda&lt;/a&gt;를 사용하고 싶다면 &lt;a href=&quot;https://conda.io/docs/install/quick.html&quot;&gt;설치방법&lt;/a&gt;을 참고하길 바란다.&lt;/p&gt;
+
+&lt;p&gt;만약 Anaconda를 설치해도 이미 설치된 Python에는 아무런 영향도 없테을니 안심해도 된다. 대신 스크립트와 코드가 사용되는 default Python이 기존의 Python이 아니라 Anaconda의 Python에서 실행될테니 이게 싫다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt; 설정을 수정하면 된다.&lt;/p&gt;
+
+&lt;p&gt;다운로드 항목을 보면 크게 Python 3.6 버전과 Python 2 버전이 있다(&lt;em&gt;2017-3-30 기준&lt;/em&gt;). 아무거나 설치해도 되지만 Python 3 을 추천한다. 왜냐하면 새로 쓰여진 코드들은 Python 3 버전에 맞춰 쓰여지고 있고, Python 2 의 환경을 구축하려면 Conda 환경을 만들면서 가능하기 때문이다. 무엇보다 &lt;a href=&quot;https://pythonclock.org/&quot;&gt;Python 2 는 은퇴할 예정&lt;/a&gt;이다. 그리고 현재 운영체제가 64-bit, 32-bit를 확인하고 선택하면 된다.&lt;/p&gt;
+
+&lt;p&gt;설치를 마친 후(&lt;em&gt;만약 터미널을 사용하여 설치하였다면 터미널을 종료하고 다시 실행&lt;/em&gt;) &lt;code class=&quot;highlighter-rouge&quot;&gt;conda list&lt;/code&gt; 명령어를 통해 default conda 환경에 설치되어 있는 모든 패키지들을 확인할 수 있다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/001-conda-list.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 1&lt;/b&gt; Miniconda의 &lt;code&gt;conda list&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;글쓴이는 OSX 환경을 사용하고 Miniconda를 설치하여 보여주기 때문에 만약 Windows 환경과 다른 점이 있다면 이야기 해주도록 하겠다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;잠깐!&lt;/strong&gt; Windows 에서 Anaconda를 설치하면 몇 가지 프로그램들이 같이 설치될 것이다.&lt;br /&gt;
+  Anaconda Navigator: 가상환경과 패키지를 관리하는 GUI&lt;br /&gt;
+  Anaconda Prompt: 커맨드 명령어를 통해 가상환경과 패키지를 관리하는 터미널&lt;br /&gt;
+  Spyder: 개발을 위한 IDE&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;그리고 혹시 발생할지 모르는 에러를 방지하기 위해 기본 환경의 패키지들을 업데이트 해주는 것이 좋다. &lt;strong&gt;Anaconda Prompt&lt;/strong&gt; 를 열고 아래의 두 명령어를 실행시킨다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ conda upgrade conda
+$ conda upgrade --all
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/002-conda-upgrade-conda.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 2&lt;/b&gt; &lt;code&gt;conda upgrade conda&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/003-conda-upgrade-all.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 3&lt;/b&gt; &lt;code&gt;conda upgrade --all&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;패키지를 설치하고 싶다면 &lt;strong&gt;그림 2&lt;/strong&gt; 와 &lt;strong&gt;그림 3&lt;/strong&gt; 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;yes&lt;/code&gt; 를 입력하면 된다. 패키지의 초기 설치는 대체로 마이너 업데이트를 하지 않은 경우가 대부분이라 혹시 모를 실행 중 발생하게 될 에러를 방지하기 위해 업데이트를 해줘야된다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;잠깐!&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;conda upgrade conda&lt;/code&gt; 의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;--all&lt;/code&gt; 에 포함되기 때문에 따로 실행할 필요가 없다. 하지만 가끔 에러가 발생하는 경우에는 따로 실행해주는게 좋다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&quot;4-0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;4. 패키지 관리&lt;/h3&gt;
+&lt;p&gt;Anacona를 설치하였다면 패키지 관리는 꽤나 직관적이다. 패키지를 설치하기 위해서는 터미널창에 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install package_name&lt;/code&gt;을 입력하면 된다. 예를 들어 &lt;code class=&quot;highlighter-rouge&quot;&gt;Numpy&lt;/code&gt;패키지를 설치한다면, &lt;strong&gt;그림 4&lt;/strong&gt; 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install numpy&lt;/code&gt;를 입력하면 된다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/004-conda-install-numpy.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 4&lt;/b&gt; &lt;code&gt;conda install numpy&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;만약 여러개의 패키지를 동시에 설치하려면 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install numpy scipy pandas&lt;/code&gt;를 사용하면 된다. 그리고 특정 버전의 패키지를 설치하는 것도 가능하다. 가령, 데이터 구조를 다루기 위한 패키지인 &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;(R 의 &lt;code class=&quot;highlighter-rouge&quot;&gt;data.table&lt;/code&gt;과 유사)의 &lt;code class=&quot;highlighter-rouge&quot;&gt;0.19.1&lt;/code&gt; 버전(&lt;em&gt;최신 버전은&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;0.19.2&lt;/code&gt;, &lt;em&gt;2017-3-30 기준&lt;/em&gt;)을 설치하고 싶다면, 아래 &lt;strong&gt;그림 5&lt;/strong&gt; 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install pandas=0.19.1&lt;/code&gt;을 입력하면 된다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/005-conda-install-pandas-0-19-1.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 5&lt;/b&gt; &lt;code&gt;conda install pandas=0.19.1&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;scipy&lt;/code&gt;와 같은 자동으로 설치되는 패키지가 있다. 왜냐하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt; 패키지는 &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;scipy&lt;/code&gt; 패키지를 사용하기 때문이다. 만약 필수 패키지가 이미 설치되어 있지 않다면 Conda는 자동적으로 필수 패키지도 설치할 것이다.&lt;/p&gt;
+
+&lt;p&gt;만약 패키지를 지우고 싶다면, &lt;code class=&quot;highlighter-rouge&quot;&gt;conda remove package_name&lt;/code&gt;을 입력하면 되고, 업데이트를 하고 싶다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda update package_name&lt;/code&gt;을 입력하면 된다. 앞에서도 이야기한 바와 같이 모든 패키지를 업데이트하고 싶다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda update --all&lt;/code&gt;을 하면 된다.&lt;/p&gt;
+
+&lt;p&gt;그리고 패키지 이름이 정확하게 기억나지 않다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda search search_term&lt;/code&gt;을 입력해보자. 예를 들면, 크롤링할때 유용하게 쓰이는 &lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/&quot;&gt;Beatiful Soup&lt;/a&gt;의 스펠링도 잘 모르겠고, 정확한 이름도 기억나지 않는다면, &lt;strong&gt;그림 6&lt;/strong&gt; 과 같이 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda search beaut&lt;/code&gt; 라고 입력해보자.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/006-conda-search-beaut.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 6&lt;/b&gt; &lt;code&gt;conda search beaut&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;beautiful-soup&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;beautifulsoup4&lt;/code&gt; 의 패키지 버전과 설치 가능한 Python 버전도 같이 나온다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;잠깐!&lt;/strong&gt; 물론, 인터넷이 연결된 상태여야되며 패키지 버전을 보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;beautiful-soup&lt;/code&gt; 이라는 이름은 이후 버전부터 &lt;code class=&quot;highlighter-rouge&quot;&gt;beautifulsoup4&lt;/code&gt; 로만 쓰인다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&quot;TensorFlow-install&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.tensorflow.org&quot;&gt;TensorFlow&lt;/a&gt; 라는 기계학습에 최적화된 오픈소스 패키지가 있다. TensorFlow 는 Anaconda 의 가상환경에서 사용이 가능하지만, &lt;code class=&quot;highlighter-rouge&quot;&gt;conda&lt;/code&gt; 명령어를 통해 설치하는 것보다 &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install tensorflow&lt;/code&gt;를 사용하여 설치하기를 권장하고 있다. &lt;a href=&quot;https://www.tensorflow.org/install/install_mac&quot;&gt;링크&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;잠깐!&lt;/strong&gt; TensorFlow에 대해서 알고 싶다면 홍콩과학기술대학교 &lt;a href=&quot;https://github.com/hunkim&quot;&gt;김성훈 교수님&lt;/a&gt;의 자료를 참고하길 바란다. (&lt;a href=&quot;https://github.com/hunkim/DeepLearningZeroToAll&quot;&gt;GitHub&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=BS6O0zOGX4E&amp;amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm&quot;&gt;YouTube&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;5. 가상환경&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-1&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-5&quot;&gt;5.1. 가상환경 만들기&lt;/h5&gt;
+&lt;p&gt;Conda는 프로젝트마다 독립된 환경을 구축할 수 있다. 따라서 아래의 &lt;strong&gt;그림 7&lt;/strong&gt; 과 같이 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda create -n env_name list_of_packages&lt;/code&gt; 을 입력하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;env_name&lt;/code&gt; 이라는 가상환경이 &lt;code class=&quot;highlighter-rouge&quot;&gt;list_of_packages&lt;/code&gt; 에 명시한 패키지와 함께 만들어지게 된다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/007-conda-create-env.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 7&lt;/b&gt; &lt;code&gt;conda create -n my_env numpy&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;Default Python 버전이 3.6.0 이라서 가상환경이 Python 3.6.0 으로 만들어졌지만 필요에 따라 버전을 다르게 할 수도 있다. &lt;code class=&quot;highlighter-rouge&quot;&gt;conda create -n python35 python=3.5&lt;/code&gt; 이렇게 Python 3 특정 버전의 환경을 만들 수도 있고, &lt;code class=&quot;highlighter-rouge&quot;&gt;conda create -n python2 python=2&lt;/code&gt; 와 같이 Python 2 버전 환경도 만들 수 있다. (&lt;em&gt;새로운 글을 통해 예를 소개할 예정&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-2&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-6&quot;&gt;5.2. 가상환경 실행&lt;/h5&gt;
+&lt;p&gt;원하는 가상환경을 만들었다면, Widows 의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;activate my_env&lt;/code&gt;, OSX 또는 Linux 의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;source activate my_env&lt;/code&gt; 을 입력한다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/008-source-activate-env.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 8&lt;/b&gt; &lt;code&gt;&lt;/code&gt;source activate my_env&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;그림 8&lt;/strong&gt; 과 같이, 터미널 프롬프트 앞 부분에 &lt;code class=&quot;highlighter-rouge&quot;&gt;(my_env) ~ $&lt;/code&gt; 이 보인다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;my_env&lt;/code&gt; 라는 가상환경이 실행 중인 것이다. 이 환경에서는 필수적인 패키지만 설치되어 있기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda list&lt;/code&gt;로 확인하고 필요한 패키지들을 설치해주면 된다. 그리고 환경을 종료하려면 Widows 의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;deactivate&lt;/code&gt;, OSX 또는 Linux 의 경우 &lt;strong&gt;그림 9&lt;/strong&gt; 처럼 &lt;code class=&quot;highlighter-rouge&quot;&gt;source deactivate&lt;/code&gt; 을 입력하면 된다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/009-source-deactivate.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 9&lt;/b&gt; &lt;code&gt;source deactivate&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-3&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-7&quot;&gt;5.3. 가상환경 저장&lt;/h5&gt;
+&lt;p&gt;내가 작성한 코드를 다른 사람들이 실행하려면 내가 개발한 환경을 다른 사람들과 공유할 수 있어야 된다. 이 부분이 Anaconda를 쓰는 또 다른 중요한 이유 중 하나다. &lt;a href=&quot;http://www.yaml.org/&quot;&gt;YAML&lt;/a&gt; 파일을 통해 Python 과 패키지의 버전을 저장할 수 있다. &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env export&lt;/code&gt;를 입력하면 현재 실행하고 있는 가상환경을 환경을 볼 수 있고, &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env export &amp;gt; environment.yaml&lt;/code&gt;을 입력하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;environment.yaml&lt;/code&gt; 이라는 파일 이름으로 저장할 수 있다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/010-conda-env-export.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 10&lt;/b&gt; &lt;code&gt;conda env export&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;잠깐!&lt;/strong&gt; &lt;strong&gt;그림 10&lt;/strong&gt; 에서 보이는 &lt;a href=&quot;https://github.com/conda/conda/issues/4596&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DEPRECATION:&lt;/code&gt;&lt;/a&gt; 출력은 conda 때문이 아니라 &lt;a href=&quot;https://pip.pypa.io/en/stable/reference/pip_freeze/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip freeze&lt;/code&gt;&lt;/a&gt; 에서 발생하는 일종의 주의사항이라고 보면 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-4&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-8&quot;&gt;5.4. 가상환경 불러오기&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;environment.yaml&lt;/code&gt; 파일을 통해 가상환경을 만들 수 있는데 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env create -f environment.yaml&lt;/code&gt; 이라고 입력하면 된다. 또한, &lt;strong&gt;그림 11&lt;/strong&gt; 의 &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env list&lt;/code&gt; 결과에서 보이는 &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt;는 default conda 가상환경이다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/articles-2017-03-30/011-conda-env-list.png&quot; /&gt;
+&lt;figcaption&gt;&lt;b&gt;그림 11&lt;/b&gt; &lt;code&gt;conda env list&lt;/code&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;잠깐!&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;prefix&lt;/code&gt; 부분은 신경쓰지 않아도 된다. 그리고 나의 디렉토리 구조가 알려지는 것이 꺼려진다면 prefix 줄 전체를 지워도 상관없다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-5&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-9&quot;&gt;5.5. 가상환경 삭제&lt;/h5&gt;
+&lt;p&gt;만약 더 이상 특정 가상환경을 사용하지 않을 것이라면, &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env remove -n env_name&lt;/code&gt; 을 통해 가상환경을 삭제할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;5-6&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;section-10&quot;&gt;5.6. 가상환경 공유&lt;/h5&gt;
+&lt;p&gt;Conda를 사용하지 않는 사람들과 나의 개발환경을 공유하려면 위에서 언급한 &lt;code class=&quot;highlighter-rouge&quot;&gt;pip freeze&lt;/code&gt;(&lt;a href=&quot;https://pip.pypa.io/en/stable/reference/pip_freeze/&quot;&gt;링크&lt;/a&gt;)를 통해 &lt;code class=&quot;highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt; 패키지 버전을 저장하고 공유하면 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;6-0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;6. 더 알고 싶다면&lt;/h3&gt;
+&lt;p&gt;Conda에 대해 더 알고 싶거나 Python 생태계와의 관계에 대해 더 알고 싶다면, Jake Vanderplas의 &lt;a href=&quot;https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/&quot;&gt;Conda myths and misconceptions&lt;/a&gt;을 읽어보길 권한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;ref&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://anaconda.org/&quot;&gt;Anaconda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conda.pydata.org/docs/using/index.html&quot;&gt;Conda Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101&quot;&gt;Deep Learning Nanodegree Foundation on Udacity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pandas.pydata.org/&quot;&gt;Package: pandas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org&quot;&gt;TensorFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/conda/conda/issues/4596&quot;&gt;issue: &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env export &amp;gt; envirionment.yaml&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Anaconda" /><category term="Python" /><category term="TensorFlow" /><category term="Data Science" /><summary type="html">왜 Anaconda를 쓸까? 어떻게 사용해야 될까?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://GzuPark.github.io{&quot;feature&quot;=&gt;&quot;bg-cloud-wave.jpg&quot;, &quot;credit&quot;=&gt;&quot;Ritz Carlton, Half Moon Bay, CA&quot;}" /></entry><entry><title type="html">Comfortable R package loading</title><link href="https://GzuPark.github.io/blog/Comfortable-R-package-loading/" rel="alternate" type="text/html" title="Comfortable R package loading" /><published>2017-02-20T00:00:00+09:00</published><updated>2017-02-20T00:00:00+09:00</updated><id>https://GzuPark.github.io/blog/Comfortable-R-package-loading</id><content type="html" xml:base="https://GzuPark.github.io/blog/Comfortable-R-package-loading/">&lt;h3 id=&quot;section&quot;&gt;1. 서론&lt;/h3&gt;
+
+&lt;p&gt;이 글을 읽는 사람들은 R의 package를 사용할때 생기는 사소한 불편함에 공감을 가질 것으로 생각된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;install 할 package개수가 많은데 설치여부가 확실하지 않아 시간을 낭비할 때&lt;/li&gt;
+  &lt;li&gt;현재 불러온 package를 중복으로 로드하는 것을 피하려고 할때&lt;/li&gt;
+  &lt;li&gt;오랜만에 사용하는 package의 새로운 version이 나왔는데 모르고 지나칠때&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이런 상황들 이외에도 다양한 상황을 한번쯤은 느껴봤을 것이라고 생각한다.
+심지어 R, RStudio의 update를 매일 확인하지 않는다면 새로운 기능을 모르고 지나치거나 bug fix가 되지 않은 상태로 작업을 하는 것은 아쉽지 않을까?
+매일 아니 매번 이런 환경을 확인하는 분들이라면 모르겠지만 필자처럼 깜박하는 사람들을 위해 &lt;strong&gt;&lt;a href=&quot;https://gzupark.github.io/usefulcode/autoload.R&quot;&gt;&lt;font color=&quot;red&quot;&gt;code&lt;/font&gt;&lt;/a&gt;&lt;/strong&gt; 를 작성해보았다.&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;2. 흐름도&lt;/h3&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/blog-2017-02-20/flowchart.jpg&quot; /&gt;&lt;figcaption&gt;&lt;b&gt;그림 1&lt;/b&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;p&gt;흐름도의 내용을 목록화 한다면, &lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;사용할 package를 입력 &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;install 되어 있는가 확인 &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;latest version 을 확인 &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;필요한 package를 install &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;현재 load 되어 있는가 확인 &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;필요한 package load &lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이렇게 대략 6단계로 구성되어 있다는 것을 알 수 있을 것이다. 이렇게 흐름도를 그린다던가 아래와 같이 구조를 알 수 있는 간략한 명령어로된 식을 구성해 보는 것이 좋다.&lt;/p&gt;
+
+&lt;center&gt;&lt;figure&gt;&lt;img src=&quot;https://GzuPark.github.io/images/blog-2017-02-20/codebyhand.jpg&quot; /&gt;&lt;figcaption&gt;&lt;b&gt;그림 2&lt;/b&gt; &lt;/figcaption&gt;&lt;/figure&gt;&lt;/center&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;3. 본론&lt;/h3&gt;
+
+&lt;h4 id=&quot;package-&quot;&gt;설치 안된 package 목록&lt;/h4&gt;
+&lt;p&gt;사용할 package 목록 중에 설치가 안된 package의 목록을 만든다.&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;new.pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;installed.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Package&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5 id=&quot;package--1&quot;&gt;3.1. 업데이트가 필요한 package 목록&lt;/h5&gt;
+&lt;p&gt;최신 버전이 아닌 업데이트가 필요한 package의 목록을 &lt;code class=&quot;highlighter-rouge&quot;&gt;new.pkg&lt;/code&gt;에 추가한다.&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;old.pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;old.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;old.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new.pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;old.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5 id=&quot;packge-&quot;&gt;3.2. packge 설치&lt;/h5&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;new.pkg&lt;/code&gt; 목록에 1개 이상의 package가 있다면 설치를 진행한다.&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5 id=&quot;packge--1&quot;&gt;3.3. packge 불러오기&lt;/h5&gt;
+&lt;p&gt;현재 session에서 이미 불러온 package를 제외하고 아직 불러오지 않은 package를 차례로 불러온다.&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;loaded.pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;package:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loaded.pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loaded.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load.pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loaded.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load.pkg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;character.only&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;4. 결론&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;autoload()&lt;/code&gt; 라는 함수 하나로 package의 install, update 확인, load까지 해결하는 편리한 기능이라고 생각한다. 그렇지만 &lt;code class=&quot;highlighter-rouge&quot;&gt;update.packages()&lt;/code&gt; 함수를 활용한다면 &lt;code class=&quot;highlighter-rouge&quot;&gt;autoload()&lt;/code&gt; 안의 update list 부분은 생략해도 될 것이다. 매번 세션을 시작하거나 파일을 새로 만들 때 필자의 github에 올려놓은 &lt;a href=&quot;https://raw.githubusercontent.com/GzuPark/usefulcode/master/autoload.R&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;autoload.R&lt;/code&gt;&lt;/a&gt; 파일을 불러와서 활용할 수도 있고, 또는 기본 환경에서 실행되도록 설정해놓는 것도 방법일 것이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/available_packages_by_name.html&quot;&gt;R package&lt;/a&gt;의 종류는 매우 다양하며 현재 &lt;strong&gt;10105&lt;/strong&gt; 개가 있다. (2017-02-20, http://cran.nexr.com/)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stat.ethz.ch/R-manual/R-devel/library/utils/html/available.packages.html&quot;&gt;available.packages()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stat.ethz.ch/R-manual/R-devel/library/base/html/library.html&quot;&gt;library()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stat.ethz.ch/R-manual/R-devel/library/utils/html/update.packages.html&quot;&gt;old.packages()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stat.ethz.ch/R-manual/R-devel/library/base/html/search.html&quot;&gt;search()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="R" /><category term="package" /><summary type="html">R package의 install, update 그리고 load를 한번에!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://GzuPark.github.io{&quot;feature&quot;=&gt;&quot;bg-yongin.jpg&quot;, &quot;credit&quot;=&gt;&quot;Yong-in, Korea&quot;}" /></entry></feed>
