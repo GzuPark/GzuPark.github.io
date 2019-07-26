@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Feed: https://gzupark.github.io/feed.xml
