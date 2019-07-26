@@ -2,7 +2,7 @@
 layout: post
 title: Why Anaconda? How to control Anaconda?
 excerpt: "왜 Anaconda를 쓸까? 어떻게 사용해야 될까?"
-categories: articles
+categories: blog
 tags: [Anaconda, Python, TensorFlow, Data Science]
 image:
   feature: bg-cloud-wave.jpg
@@ -73,7 +73,7 @@ Anaconda는 [Windows](https://www.continuum.io/downloads#windows), [Mac OS X](ht
 
 설치를 마친 후(*만약 터미널을 사용하여 설치하였다면 터미널을 종료하고 다시 실행*) `conda list` 명령어를 통해 default conda 환경에 설치되어 있는 모든 패키지들을 확인할 수 있다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/001-conda-list.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/001-conda-list.png">
 <figcaption><b>그림 1</b> Miniconda의 <code>conda list</code></figcaption></figure></center>
 
 글쓴이는 OSX 환경을 사용하고 Miniconda를 설치하여 보여주기 때문에 만약 Windows 환경과 다른 점이 있다면 이야기 해주도록 하겠다.
@@ -90,10 +90,10 @@ $ conda upgrade conda
 $ conda upgrade --all
 ```
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/002-conda-upgrade-conda.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/002-conda-upgrade-conda.png">
 <figcaption><b>그림 2</b> <code>conda upgrade conda</code></figcaption></figure></center>
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/003-conda-upgrade-all.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/003-conda-upgrade-all.png">
 <figcaption><b>그림 3</b> <code>conda upgrade --all</code></figcaption></figure></center>
 
 패키지를 설치하고 싶다면 **그림 2** 와 **그림 3** 처럼 `yes` 를 입력하면 된다. 패키지의 초기 설치는 대체로 마이너 업데이트를 하지 않은 경우가 대부분이라 혹시 모를 실행 중 발생하게 될 에러를 방지하기 위해 업데이트를 해줘야된다.
@@ -105,12 +105,12 @@ $ conda upgrade --all
 ### 4. 패키지 관리
 Anacona를 설치하였다면 패키지 관리는 꽤나 직관적이다. 패키지를 설치하기 위해서는 터미널창에 `conda install package_name`을 입력하면 된다. 예를 들어 `Numpy`패키지를 설치한다면, **그림 4** 처럼 `conda install numpy`를 입력하면 된다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/004-conda-install-numpy.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/004-conda-install-numpy.png">
 <figcaption><b>그림 4</b> <code>conda install numpy</code></figcaption></figure></center>
 
 만약 여러개의 패키지를 동시에 설치하려면 `conda install numpy scipy pandas`를 사용하면 된다. 그리고 특정 버전의 패키지를 설치하는 것도 가능하다. 가령, 데이터 구조를 다루기 위한 패키지인 `pandas`(R 의 `data.table`과 유사)의 `0.19.1` 버전(*최신 버전은* `0.19.2`, *2017-3-30 기준*)을 설치하고 싶다면, 아래 **그림 5** 처럼 `conda install pandas=0.19.1`을 입력하면 된다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/005-conda-install-pandas-0-19-1.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/005-conda-install-pandas-0-19-1.png">
 <figcaption><b>그림 5</b> <code>conda install pandas=0.19.1</code></figcaption></figure></center>
 
 `pandas`의 경우 `numpy`, `scipy`와 같은 자동으로 설치되는 패키지가 있다. 왜냐하면 `pandas` 패키지는 `numpy`와 `scipy` 패키지를 사용하기 때문이다. 만약 필수 패키지가 이미 설치되어 있지 않다면 Conda는 자동적으로 필수 패키지도 설치할 것이다.
@@ -119,7 +119,7 @@ Anacona를 설치하였다면 패키지 관리는 꽤나 직관적이다. 패키
 
 그리고 패키지 이름이 정확하게 기억나지 않다면 `conda search search_term`을 입력해보자. 예를 들면, 크롤링할때 유용하게 쓰이는 [Beatiful Soup](https://www.crummy.com/software/BeautifulSoup/)의 스펠링도 잘 모르겠고, 정확한 이름도 기억나지 않는다면, **그림 6** 과 같이 `conda search beaut` 라고 입력해보자.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/006-conda-search-beaut.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/006-conda-search-beaut.png">
 <figcaption><b>그림 6</b> <code>conda search beaut</code></figcaption></figure></center>
 
 `beautiful-soup`, `beautifulsoup4` 의 패키지 버전과 설치 가능한 Python 버전도 같이 나온다.
@@ -141,7 +141,7 @@ Anacona를 설치하였다면 패키지 관리는 꽤나 직관적이다. 패키
 ##### 5.1. 가상환경 만들기
 Conda는 프로젝트마다 독립된 환경을 구축할 수 있다. 따라서 아래의 **그림 7** 과 같이 `conda create -n env_name list_of_packages` 을 입력하면 `env_name` 이라는 가상환경이 `list_of_packages` 에 명시한 패키지와 함께 만들어지게 된다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/007-conda-create-env.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/007-conda-create-env.png">
 <figcaption><b>그림 7</b> <code>conda create -n my_env numpy</code></figcaption></figure></center>
 
 Default Python 버전이 3.6.0 이라서 가상환경이 Python 3.6.0 으로 만들어졌지만 필요에 따라 버전을 다르게 할 수도 있다. `conda create -n python35 python=3.5` 이렇게 Python 3 특정 버전의 환경을 만들 수도 있고, `conda create -n python2 python=2` 와 같이 Python 2 버전 환경도 만들 수 있다. (*새로운 글을 통해 예를 소개할 예정*)
@@ -151,12 +151,12 @@ Default Python 버전이 3.6.0 이라서 가상환경이 Python 3.6.0 으로 만
 ##### 5.2. 가상환경 실행
 원하는 가상환경을 만들었다면, Widows 의 경우 `activate my_env`, OSX 또는 Linux 의 경우 `source activate my_env` 을 입력한다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/008-source-activate-env.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/008-source-activate-env.png">
 <figcaption><b>그림 8</b> <code></code>source activate my_env</figcaption></figure></center>
 
 **그림 8** 과 같이, 터미널 프롬프트 앞 부분에 `(my_env) ~ $` 이 보인다면 `my_env` 라는 가상환경이 실행 중인 것이다. 이 환경에서는 필수적인 패키지만 설치되어 있기 때문에 `conda list`로 확인하고 필요한 패키지들을 설치해주면 된다. 그리고 환경을 종료하려면 Widows 의 경우 `deactivate`, OSX 또는 Linux 의 경우 **그림 9** 처럼 `source deactivate` 을 입력하면 된다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/009-source-deactivate.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/009-source-deactivate.png">
 <figcaption><b>그림 9</b> <code>source deactivate</code></figcaption></figure></center>
 
 <a name='5-3'></a>
@@ -164,7 +164,7 @@ Default Python 버전이 3.6.0 이라서 가상환경이 Python 3.6.0 으로 만
 ##### 5.3. 가상환경 저장
 내가 작성한 코드를 다른 사람들이 실행하려면 내가 개발한 환경을 다른 사람들과 공유할 수 있어야 된다. 이 부분이 Anaconda를 쓰는 또 다른 중요한 이유 중 하나다. [YAML](http://www.yaml.org/) 파일을 통해 Python 과 패키지의 버전을 저장할 수 있다. `conda env export`를 입력하면 현재 실행하고 있는 가상환경을 환경을 볼 수 있고, `conda env export > environment.yaml`을 입력하면 `environment.yaml` 이라는 파일 이름으로 저장할 수 있다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/010-conda-env-export.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/010-conda-env-export.png">
 <figcaption><b>그림 10</b> <code>conda env export</code></figcaption></figure></center>
 
 > **잠깐!** **그림 10** 에서 보이는 [`DEPRECATION:`](https://github.com/conda/conda/issues/4596) 출력은 conda 때문이 아니라 [`pip freeze`](https://pip.pypa.io/en/stable/reference/pip_freeze/) 에서 발생하는 일종의 주의사항이라고 보면 된다.
@@ -174,7 +174,7 @@ Default Python 버전이 3.6.0 이라서 가상환경이 Python 3.6.0 으로 만
 ##### 5.4. 가상환경 불러오기
 `environment.yaml` 파일을 통해 가상환경을 만들 수 있는데 `conda env create -f environment.yaml` 이라고 입력하면 된다. 또한, **그림 11** 의 `conda env list` 결과에서 보이는 `root`는 default conda 가상환경이다.
 
-<center><figure><img src="{{ site.url }}/images/articles-2017-03-30/011-conda-env-list.png">
+<center><figure><img src="{{ site.url }}/images/blog-2017-03-30/011-conda-env-list.png">
 <figcaption><b>그림 11</b> <code>conda env list</code></figcaption></figure></center>
 
 > **잠깐!** `prefix` 부분은 신경쓰지 않아도 된다. 그리고 나의 디렉토리 구조가 알려지는 것이 꺼려진다면 prefix 줄 전체를 지워도 상관없다.
