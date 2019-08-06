@@ -35,7 +35,7 @@ Mac 또는 Windows 환경에서 webcam을 Docker에 연결하는 것은 자주 �
 
 [GitHub](https://github.com/)를 서핑하다보면, 튜토리얼이 잘 구성되어 있는 오픈소스 코드가 많이 있습니다. 제가 관심이 많은 [Computer Vision 분야](https://github.com/search?q=computer+vision)는 주로 Ubuntu 환경을 권장하는 코드가 대부분입니다.
 
-Machine Learning 코드라면 회사에서 사용하는 Linux 머신이나 공짜 GCP 크레딧(Thanks [@rihwan](https://github.com/rihwan))을 사용하겠지만 Visualization이 필요한 상황에서는 귀찮은 일이 많아졌습니다. 왜냐하면 저는 주로 Macbook Pro를 사용하여 작업 환경의 자유도가 높은 상황이라 테스트용으로 이미지를 출력할땐 로컬에서 보는 것을 선호하였고, 팀 차원에서 코드를 공유해서 작업하다 보니 자연스럽게 [Docker](https://www.docker.com/)를 사용하고 있습니다.
+Machine Learning 코드라면 회사에서 사용하는 Linux 머신이나 공짜 GCP 크레딧을 사용하겠지만 Visualization이 필요한 상황에서는 귀찮은 일이 많아졌습니다. 왜냐하면 저는 주로 Macbook Pro를 사용하여 작업 환경의 자유도가 높은 상황이라 테스트용으로 이미지를 출력할땐 로컬에서 보는 것을 선호하였고, 팀 차원에서 코드를 공유해서 작업하다 보니 자연스럽게 [Docker](https://www.docker.com/)를 사용하고 있습니다.
 
 [top](#)
 
