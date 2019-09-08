@@ -16,7 +16,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -39,7 +39,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 owner:
   name: Jongmin Park
   avatar: bio-photo.jpg
-  email: jijupax@gmail.com
+  email:
   disqus-shortname: gzupark
   twitter: jijupax
   facebook: jijupax
@@ -53,7 +53,7 @@ owner:
   weibo: #userid
   google:
     plus: #username
-    analytics:
+    analytics: 'UA-96195571-1'
     verify:
     ad-client:
     ad-slot:
