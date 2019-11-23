@@ -130,3 +130,6 @@ $RECYCLE.BIN/
 
 # Visual Studio Code
 .vscode/*
+
+# jekyll
+.jekyll-cache
